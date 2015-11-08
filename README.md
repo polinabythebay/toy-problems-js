@@ -1,26 +1,14 @@
-### Data Structures with TDD
+### Algorithms with TDD
 
-- Singly LinkedList
-- Doubly LinkedList
-- Stack
-- Queue
-- Circular Buffer (Circular Queue)
-- HashTable
-- Set
-- Tree
-- Graph
-- Binary Search Tree
+- Selection Sort
+- Insertion Sort
+- Merge Sort
+- Quick Sort
+- Binary Search
+- n Queens
 
-### Data Structure Operations
+### Time and Space Complexity
 
- | Access | Search | Insertion | Delete
---- | --- | --- | --- | --- | --- | 
-Array |  | 
-Stack |  | 
-Singly LinkedList |  | 
-Doubly LinkedList |  |
-Hash Table |  |
-Binary Search Tree |  |
 
 Want to implement data structures on your own and watch the tests pass? Fork this branch, clone the repo and checkout the new-slate branch.
 
