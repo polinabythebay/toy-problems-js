@@ -1,0 +1,3 @@
+var binarySearch = function() {
+  
+}
