@@ -5,7 +5,6 @@
 - Merge Sort
 - Quick Sort
 - Binary Search
-- n Queens
 
 ### Time and Space Complexity
 
