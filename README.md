@@ -18,6 +18,13 @@ Binary Search | O(log(n)) | O(1) | O(log(n)) |
 
 ### Space Complexity
 
+ | Worst | Best | Average |
+--- | --- | --- | --- | --- |
+Selection Sort | O(n) | |  |
+Insertion Sort | O(n)|  |  |
+Merge Sort | O(n) |   |  |
+Quick Sort | O(n) |  |  |
+Binary Search | O(1) |  |  |
 
 
 Want to implement data structures on your own and watch the tests pass? Fork this branch, clone the repo and checkout the new-slate branch.
