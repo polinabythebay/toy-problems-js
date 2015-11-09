@@ -12,9 +12,9 @@
 --- | --- | --- | --- | --- |
 Selection Sort | O(n^2) | O(n^2) | O(n^2) |
 Insertion Sort | O(n^2) | O(n) | O(n^2)  |
-Merge Sort | O(nlog(n)) | O(nlog(n))  | O(nlog(n)) |
-Quick Sort | O(n^2) | O(nlog(n)) | O(nlog(n)) |
-Binary Search | O(log(n)) | O(1) | O(log(n)) |
+Merge Sort | O(nlogn) | O(nlogn)  | O(nlogn) |
+Quick Sort | O(n^2) | O(nlogn) | O(nlogn) |
+Binary Search | O(logn) | O(1) | O(logn) |
 
 ### Space Complexity
 
