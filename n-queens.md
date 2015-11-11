@@ -27,10 +27,11 @@ Given an n x n chessboard, how many different ways can you place n queens, such 
 - hasMinorDiagonalConflictAt(minorDiagonalColumnIndexAtFirstRow)
 - hasAnyMinorDiagonalConflicts()
 
-####Solutions
+####Questions
 
 - countNQueensSolutions() 
   Return a count of the total number of solutions to the n-queens problem.
+  
 - findNQueensSolution() 
   Return a single solution to the n-queens problem.
 
