@@ -34,7 +34,7 @@ function applyArray(arr1, arr2) {
   return result;
 }
 
-return playRPS(roundCount, rocks);
+return playRPS(roundCount, rps);
 }
 
 
