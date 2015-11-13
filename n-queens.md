@@ -4,17 +4,11 @@ Given an n x n chessboard, how many different ways can you place n queens, such 
 
 ####Board functions:
 
-- makeEmptyBoardMatrix(n)
-- range()
+- new Board(n)
+- printBoard()
 - isInBounds()
 - getPiece()
 - setPiece()
-- allRowsCopy()
-- hasAnyQueensConflicts()
-- togglePiece() //for interacting with a UI
-- getFirstRowColumnIndexForMajorDiagonalOn(row, col)
-- getFirstRowColumnIndexForMinorDiagonalOn(row, col)
-- hasAnyQueenConflictsOn(row, col)
 
 ####Helper functions for algorithm:
 
@@ -26,9 +20,10 @@ Given an n x n chessboard, how many different ways can you place n queens, such 
 - hasAnyMajorDiagonalConflicts()
 - hasMinorDiagonalConflictAt(minorDiagonalColumnIndexAtFirstRow)
 - hasAnyMinorDiagonalConflicts()
+- hasAnyQueensConflicts()
 
 ####Questions
 
 - **countNQueensSolutions()** Return a count of the total number of solutions to the n-queens problem.
 - **findNQueensSolution()** Return a single solution to the n-queens problem.
-
+- **returnAllNQueensSolutions()** Return all board solutions.
