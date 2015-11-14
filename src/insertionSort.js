@@ -24,5 +24,5 @@ var insert = function(array, rightMostIndex, value) {
     }
   }
   
-  return array;
+  //return array;
 }
