@@ -26,8 +26,11 @@ Merge Sort | O(n) |   |  |
 Quick Sort | O(n) |  |  |
 Binary Search | O(1) |  |  |
 
+### Additional resources
 
-Want to implement data structures on your own and watch the tests pass? Fork this branch, clone the repo and checkout the new-slate branch.
+- [JavaScript implementations of different Computer Science algorithms](https://mgechev.github.io/javascript-algorithms/index.html)
+
+### Forking
 
 ```
 $ git clone https://github.com/polinadotio/this-project.git
