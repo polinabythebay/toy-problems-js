@@ -54,10 +54,9 @@ function primeTester (n) {
        return false;
    }
 
-   var limit = Math.squrt(n);
+   var limit = Math.floor(Math.sqrt(n));
+
    for (var i = 5; i < limit; i = i + 6) {
-        // console.log('n', n, 'divisor', i);
-        // console.log("mod", n % i);
         
        if (n % i === 0 || n % (i + 2) === 0) {
            return false;

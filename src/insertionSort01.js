@@ -36,9 +36,3 @@ var insert = function(array, rightMostElt) {
    }
   }
 }
-
-  
-
-
-
-}
