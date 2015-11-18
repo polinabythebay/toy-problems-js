@@ -1,4 +1,6 @@
-### Algorithms with TDD
+## Algorithms with TDD
+
+### Part 1: sampling of classical algorithms
 
 - Selection Sort
 - Insertion Sort
@@ -6,7 +8,52 @@
 - Quick Sort
 - Binary Search
 
-### Time Complexity
+### Part 2: sampling of interview problem-type algorithms
+
+- n-queens
+- primality check
+- rock/paper/scissors permutations
+- even occurences
+- character frequency
+
+### Part 3: sampling of common functional programming methods (ex. Underscore.js)
+
+#### Collections
+
+- first
+- last
+- each
+- indexOf
+- filter
+- reject
+- uniq
+- map
+- pluck
+- reduce
+- contains
+- every
+- some
+- shuffle
+- invoke
+- sortBy
+- zip
+- flatten
+- intersection
+- difference
+
+#### Objects
+
+- extend
+- defaults
+
+#### Functions
+
+- once
+- memoize
+- delay
+- throttle
+
+### Time Complexity of sorting Algs
 
  | Worst | Best | Average |
 --- | --- | --- | --- | --- |
