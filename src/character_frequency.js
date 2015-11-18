@@ -8,6 +8,7 @@
 var charFreq = function(str) {
     var arr = str.split("");
     var bucket = {};
+    var result = [];
     for (var i = 0; i < arr.length; i++) {
         //store char frequencies
         if (bucket[arr[i]] === undefined) {
@@ -16,8 +17,31 @@ var charFreq = function(str) {
             bucket[arr[i]]++;
         }
     }
-    console.log(bucket);
-    
+
+  for (var elt in bucket) {
+      result.push([elt, bucket[elt]]);
+  }
   
+  result.sort(function (a, b) { 
+  //sort descending by number
+  if (a[1] < b[1]) {
+    return 1;
+  }
+  if (a[1] > b[1]) {
+    return -1;
+  }
+  //if the same, sort ascending by alpha
+  if (a[1] === b[1]) {
+      if (a[0] > b[0]) {
+          return 1;
+      }
+      if (a[0] < b[0]) {
+          return -1;
+      }
+  }
+});
+  
+  return result;
 }
-charFreq("aaabbc");
+
+charFreq("mississippi");
