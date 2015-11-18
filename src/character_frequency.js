@@ -23,6 +23,10 @@ var charFreq = function(str) {
   }
   
   result.sort(function (a, b) { 
+  //this relies on ascii
+  //also relies on a particular browser
+  //you cannot predict what the behavior is going to be
+  
   //sort descending by number
   if (a[1] < b[1]) {
     return 1;
