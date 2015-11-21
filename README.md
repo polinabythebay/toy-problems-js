@@ -1,5 +1,7 @@
 ## Algorithms with TDD
 
+This repo is dedicated to problem solving in JavaScript. TDD courtesy of Mocha and Chai.
+
 ### Classical algorithms
 
 - Selection Sort
