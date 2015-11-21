@@ -1,6 +1,6 @@
 ## Algorithms with TDD
 
-### Part 1: sampling of classical algorithms
+### Classical algorithms
 
 - Selection Sort
 - Insertion Sort
@@ -8,15 +8,17 @@
 - Quick Sort
 - Binary Search
 
-### Part 2: sampling of interview problem-type algorithms
+### General problem solving algorithms
 
 - n-queens
 - primality check
 - rock/paper/scissors permutations
 - even occurences
 - character frequency
+- number to english
+- highest contiguous sum
 
-### Part 3: sampling of common functional programming methods (ex. Underscore.js)
+### Common functional programming methods
 
 #### Collections
 
