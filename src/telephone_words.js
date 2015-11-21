@@ -19,10 +19,26 @@ var data = {
 function telephoneWords (digitString) {
   // Write your code here, and
   // return your final answer.
+
+  var arr = digitString.split("");
+
 }
+
+//first thought --> up to 4 nested for loops.
+//however, that's not a super elegant solution
 
 
 //examples
 //"0002"
 //=> [ "000A", "000B", "000C" ]
+
+//1123
+
+//1234
+
+//0002
+
+//5987
+
+
 
