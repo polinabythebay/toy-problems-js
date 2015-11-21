@@ -19,6 +19,7 @@ This repo is dedicated to problem solving in JavaScript. TDD courtesy of Mocha a
 - character frequency
 - number to english
 - highest contiguous sum
+- telephone words
 
 ### Common functional programming methods
 
