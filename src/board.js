@@ -114,12 +114,12 @@ Board.prototype.hasAnyMinorDiagonalConflicts = function() {
 }
 
 Board.prototype.hasAnyQueensConflicts = function(row, col) {
-  return (
-        this.hasRowConflictAt(row) ||
-        this.hasColConflictAt(col) ||
-        this.hasMajorDiagonalConflictAt(col - row) ||
-        this.hasMinorDiagonalConflictAt(col + row))
-      );
+  // return (
+  //       this.hasRowConflictAt(row) ||
+  //       this.hasColConflictAt(col) ||
+  //       this.hasMajorDiagonalConflictAt(col - row) ||
+  //       this.hasMinorDiagonalConflictAt(col + row))
+  //     );
 }
 
 
