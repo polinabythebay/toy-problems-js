@@ -43,10 +43,9 @@ TODO:
 - Remove specified characters in a string
 - Reverse words in a string
 
--> Given an array of unique words, find the word that contains the greatest number of other words. A word must be at least two letters long.
--> Given an array, find the length of the longest increasing sequence.
--> Given an array of arbitrarily nested arrays, return n, where n is the deepest level that contains a non-array value.
-
+- Given an array of unique words, find the word that contains the greatest number of other words. A word must be at least two letters long.
+- Given an array, find the length of the longest increasing sequence.
+- Given an array of arbitrarily nested arrays, return n, where n is the deepest level that contains a non-array value.
 
 ### Common functional programming methods
 
