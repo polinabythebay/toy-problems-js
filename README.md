@@ -34,6 +34,17 @@ TODO:
 - implement the Towers of Hanoi with 3 towers and N disks
 - find all permutations to represent n cents, given 1, 5, 10, 25 cent coins
 - print all valid combinations of n-pairs of parentheses
+- Sort an array of strings so all anagrams are next to each other
+
+- Determine if a string contains unique characters
+- Determine if a string is a permutation of another
+- Determine if a string is a rotation of another
+- Reverse characters in a string
+- Find the first non-repeated character in a string
+- Remove specified characters in a string
+- Reverse words in a string
+
+
 
 ### Common functional programming methods
 
@@ -94,6 +105,7 @@ Binary Search | O(1) |  |  |
 
 ### Additional resources
 
+- [All the problems](http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/)
 - [JavaScript implementations of different Computer Science algorithms](https://mgechev.github.io/javascript-algorithms/index.html)
 
 ### Forking
