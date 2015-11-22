@@ -16,6 +16,13 @@ var data = {
   9:['W','X','Y','Z']
 }
 
+// cartesian product
+//returns a set of all ordered pairs 
+//from multiple sets
+
+//you can do cartesian product with reduce, flatten, map
+
+
 function telephoneWords (digitString) {
   // Write your code here, and
   // return your final answer.
@@ -39,6 +46,24 @@ function telephoneWords (digitString) {
 //0002
 
 //5987
+
+//very slick way using underscore
+function cartesianProductOf() {
+    return _.reduce(arguments, function(a, b) {
+        return _.flatten(_.map(a, function(x) {
+            return _.map(b, function(y) {
+                return x.concat([y]);
+            });
+        }), true);
+    }, [ [] ]);
+};
+
+cartesianProductOf([1, 2], [3, 4], ['a', 'b']); 
+
+//combinations
+//permutations
+//power set: http://cwestblog.com/2011/05/02/power-set/
+//cartesian product: http://cwestblog.com/2011/05/02/cartesian-product-of-multiple-arrays/
 
 
 

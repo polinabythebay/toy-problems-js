@@ -1,25 +1,39 @@
 ## Algorithms with TDD
 
-This repo is dedicated to problem solving in JavaScript. TDD courtesy of Mocha and Chai.
+This repo is dedicated to problem solving in ES5. TDD courtesy of Mocha and Chai.
 
 ### Classical algorithms
 
 - Selection Sort
 - Insertion Sort
-- Merge Sort
-- Quick Sort
 - Binary Search
+
+TODO:
+
+- Merge sort
+- Quick sort
 
 ### General problem solving algorithms
 
 - n-queens
 - primality check
-- rock/paper/scissors permutations
+- rock/paper/scissors combinations
 - even occurences
 - character frequency
 - number to english
 - highest contiguous sum
-- telephone words permutations
+
+TODO:
+
+- string combinations
+- string permutations
+- cartesian product
+- power set
+- implement fibonacci recursively, dynamically, and iteratively
+- implement factorial recursively, dynamically, and iteratively
+- implement the Towers of Hanoi with 3 towers and N disks
+- find all permutations to represent n cents, given 1, 5, 10, 25 cent coins
+- print all valid combinations of n-pairs of parentheses
 
 ### Common functional programming methods
 
