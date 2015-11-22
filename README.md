@@ -35,7 +35,6 @@ TODO:
 - find all permutations to represent n cents, given 1, 5, 10, 25 cent coins
 - print all valid combinations of n-pairs of parentheses
 - Sort an array of strings so all anagrams are next to each other
-
 - Determine if a string contains unique characters
 - Determine if a string is a permutation of another
 - Determine if a string is a rotation of another
@@ -44,6 +43,9 @@ TODO:
 - Remove specified characters in a string
 - Reverse words in a string
 
+-> Given an array of unique words, find the word that contains the greatest number of other words. A word must be at least two letters long.
+-> Given an array, find the length of the longest increasing sequence.
+-> Given an array of arbitrarily nested arrays, return n, where n is the deepest level that contains a non-array value.
 
 
 ### Common functional programming methods
