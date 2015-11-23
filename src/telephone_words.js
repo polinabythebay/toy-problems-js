@@ -66,4 +66,53 @@ cartesianProductOf([1, 2], [3, 4], ['a', 'b']);
 //cartesian product: http://cwestblog.com/2011/05/02/cartesian-product-of-multiple-arrays/
 
 
+//rough draft:
+var data = {
+  0:['0'],
+  1:['1'],
+  2:['A','B','C'],
+  3:['D','E','F'],
+  4:['G','H','I'],
+  5:['J','K','L'],
+  6:['M','N','O'],
+  7:['P','Q','R','S'],
+  8:['T','U','V'],
+  9:['W','X','Y','Z']
+}
+
+function telephoneWords (digitString) {
+  // Write your code here, and
+  // return your final answer.
+
+  var arr = digitString.split("");
+  var words = [];
+  for (var k = 0; k < arr.length; k++) {
+      words.push(data[arr[k]]);
+  }
+  console.log(words);
+  //go through array of arrays and generate permutations
+  var result = [];
+
+  var recurse = function(current, arr) {
+    var curr = current; //A
+    var next = arr.splice(0, 1);
+    result.push(curr.concat(next));
+   // console.log("curr next result",curr, next, result);
+    if (arr.length === 0) {
+        return;
+    }
+    
+    recurse(curr, arr);
+  }
+  for (var i = 0; i < words[0].length; i++) {
+         recurse(words[0][i],words[1].slice());
+         
+  }
+  //recurse(words[0],words[1]);
+
+  console.log(result);
+}
+
+telephoneWords('234');
+
 
