@@ -3,49 +3,75 @@
 //the phone with that number. 
 //(You should return all permutations, not only English words.)
 
-var data = {
-  0:['0'],
-  1:['1'],
-  2:['A','B','C'],
-  3:['D','E','F'],
-  4:['G','H','I'],
-  5:['J','K','L'],
-  6:['M','N','O'],
-  7:['P','Q','R','S'],
-  8:['T','U','V'],
-  9:['W','X','Y','Z']
-}
-
-// cartesian product
-//returns a set of all ordered pairs 
-//from multiple sets
-
-//you can do cartesian product with reduce, flatten, map
-
+//my iterative version
 
 function telephoneWords (digitString) {
-  // Write your code here, and
-  // return your final answer.
-
-  var arr = digitString.split("");
-
+  
+  var telephone_data = {
+    0:['0'],
+    1:['1'],
+    2:['A','B','C'],
+    3:['D','E','F'],
+    4:['G','H','I'],
+    5:['J','K','L'],
+    6:['M','N','O'],
+    7:['P','Q','R','S'],
+    8:['T','U','V'],
+    9:['W','X','Y','Z']
+  }
+  
+  return flatten_to_string(
+          cartesian_product(
+            digit_to_data(digitString)));
+            
+  //input: string representing up to 4 numbers
+  //output: array of arrays
+  function digit_to_data(digitString) {
+    var arr = digitString.split("");
+    var words = [];
+    for (var k = 0; k < arr.length; k++) {
+      words.push(telephone_data[arr[k]]);
+    }
+    return words;
+  }
+  
+  //input: two arrays
+  //output: 1 array of arrays
+  function array_product(arr1, arr2) {
+    var product = [];
+    for (var i = 0; i < arr1.length; i++) {
+        for (var j = 0; j < arr2.length; j++) {
+          var concat = arr1[i].concat(arr2[j]);
+          product.push(concat);
+        }
+    }
+    return product;
+  }
+  
+  //input: array of n arrays
+  //output: cartesian product of n arrays
+  function cartesian_product(arrs) {
+    var result = [[]];
+    for (var i = 0; i < arrs.length; i++) {
+      result = array_product(result, arrs[i]);
+    }
+    return result;
+  }
+  
+  //input: array of arrays
+  //output: array of strings
+  function flatten_to_string(arrs) {
+    var result = [];
+    for (var i = 0; i < arrs.length; i++) {
+      result[i] = '';
+      for (var j = 0; j < arrs[i].length; j++) {
+        result[i] = result[i] + arrs[i][j];
+      }
+    }
+    return result;
+  }
 }
 
-//first thought --> up to 4 nested for loops.
-//however, that's not a super elegant solution
-
-
-//examples
-//"0002"
-//=> [ "000A", "000B", "000C" ]
-
-//1123
-
-//1234
-
-//0002
-
-//5987
 
 //very slick way using underscore
 function cartesianProductOf() {
@@ -66,53 +92,7 @@ cartesianProductOf([1, 2], [3, 4], ['a', 'b']);
 //cartesian product: http://cwestblog.com/2011/05/02/cartesian-product-of-multiple-arrays/
 
 
-//rough draft:
-var data = {
-  0:['0'],
-  1:['1'],
-  2:['A','B','C'],
-  3:['D','E','F'],
-  4:['G','H','I'],
-  5:['J','K','L'],
-  6:['M','N','O'],
-  7:['P','Q','R','S'],
-  8:['T','U','V'],
-  9:['W','X','Y','Z']
-}
 
-function telephoneWords (digitString) {
-  // Write your code here, and
-  // return your final answer.
 
-  var arr = digitString.split("");
-  var words = [];
-  for (var k = 0; k < arr.length; k++) {
-      words.push(data[arr[k]]);
-  }
-  console.log(words);
-  //go through array of arrays and generate permutations
-  var result = [];
-
-  var recurse = function(current, arr) {
-    var curr = current; //A
-    var next = arr.splice(0, 1);
-    result.push(curr.concat(next));
-   // console.log("curr next result",curr, next, result);
-    if (arr.length === 0) {
-        return;
-    }
-    
-    recurse(curr, arr);
-  }
-  for (var i = 0; i < words[0].length; i++) {
-         recurse(words[0][i],words[1].slice());
-         
-  }
-  //recurse(words[0],words[1]);
-
-  console.log(result);
-}
-
-telephoneWords('234');
 
 
