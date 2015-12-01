@@ -3,8 +3,68 @@
 //the phone with that number. 
 //(You should return all permutations, not only English words.)
 
-//my iterative version
+/*************************************************************
+Big O discussion
 
+http://math.stackexchange.com/questions/1345148/the-time-complexity-of-the-n-ary-cartesian-product-over-n-sets
+
+**************************************************************/
+
+
+/*************************************************************
+Recursive Version #1
+**************************************************************/
+
+var digitstrings = {
+  0 : '0',
+  1 : '1',
+  2 : 'ABC',
+  3 : 'DEF',
+  4 : 'GHI',
+  5 : 'JKL',
+  6 : 'MNO',
+  7 : 'PQRS',
+  8 : 'TUV',
+  9 : 'WXYZ'
+}
+
+var telephoneWordsRecursive = function(digitString) {
+  //Save current words through closure loop
+  var words = [];
+
+  //subroutine to handle recursion
+  //word builds on word we create
+  //digits argument that holds remaining options
+  var lettersForDigits = function (word, digits) {
+    //base case
+    if (digits.length === 0) {
+      words.push(word);
+      return;
+    }
+    //recurse
+    //reference to first digit
+    var currentDigit = digits[0];
+    //store remaining digits
+    var remainDigits = digits.slice(1);
+    //get letter options for current digits
+    var letters = phoneDigitsToLetters[currentDigit].split('');
+
+    //run through them calling our subroutine recursively while passing in a word with
+    //each letter added and the remaining digits
+    for (var i = 0; i < letters.length; i++) {
+      lettersForDigits(word + letters[i], remainDigits);
+      //we're not popping any characters off after the recursion
+    };
+  };
+
+  lettersForDigits('', digitString.split(''));
+  return words;
+}
+
+
+/*************************************************************
+Iterative Version with different data set
+**************************************************************/
 function telephoneWords (digitString) {
   
   var telephone_data = {
@@ -72,8 +132,9 @@ function telephoneWords (digitString) {
   }
 }
 
-
-//very slick way using underscore
+/*************************************************************
+Slick Underscore.js Version
+**************************************************************/
 function cartesianProductOf() {
     return _.reduce(arguments, function(a, b) {
         return _.flatten(_.map(a, function(x) {
@@ -90,6 +151,10 @@ cartesianProductOf([1, 2], [3, 4], ['a', 'b']);
 //permutations
 //power set: http://cwestblog.com/2011/05/02/power-set/
 //cartesian product: http://cwestblog.com/2011/05/02/cartesian-product-of-multiple-arrays/
+
+
+
+
 
 
 
