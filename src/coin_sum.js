@@ -36,6 +36,57 @@ makeChange(5,coins);
 
 
 
+var coins = [25,10,5,1];
+//set the default counts array
+var counts = new Array(coins.length);
+//coins sorted in descending order
+//counts records number of coins at specific location
+
+
+function printCombination(coins, counts, startIndex, totalAmount) {
+    //decide if we shoudl proceed or not by track start index
+    if (startIndex >= coins.length) {
+        //format the print out as 'amount=?*25+?*10..'
+        
+        for (var i = 0; i < coins.length; i++) {
+            console.log(counts[i],"*",coins[i],"+\n");
+        }
+        return;
+    }
+    //otherwise we proceed
+    //but notice if startIndex is the last one,
+    //we need to check if
+    //it can be dividable by the smallest
+    //if so, this is a good combination
+    //otherwise, this is not a possible combination
+
+    if(startIndex === coins.length-1) {
+        //good combination
+        if (totalAmount % coins[startIndex] === 0) {
+            //set the counts of coins at startindex
+            counts[startIndex] = totalAmount/coins[startIndex];
+            //proceed to recursive call
+            printCombination(coins, counts, startIndex+1,0);
+            //start index is +1 and remainding amount is 0
+        }
+    }
+    else {
+        //we still have option to choose 0-N larger coins
+        for (var i = 0; i <= totalAmount/coins[startIndex];i++) {
+            //for every cycle in loop, we choose an arbitrary
+            //number of larger coins and proceed next
+            counts[startIndex] = i;
+            printCombination(coins, counts, startIndex+1, totalAmount- coins[startIndex]*i);
+            //notice that we need to update the remainder
+
+        }
+    }
+
+}
+
+console.log("combinations from 25 cents", "=");
+printCombination(coins, counts, 0, 25);
+
 
 
 
