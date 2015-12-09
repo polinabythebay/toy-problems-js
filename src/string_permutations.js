@@ -26,6 +26,10 @@ var stringPermutations = function(string) {
 
 }
 
+/*************************************************************
+Version 1
+**************************************************************/
+
 //this is still confusing to me
 //do not completely understand this
 
@@ -63,3 +67,58 @@ function permutator(inputArr) {
 }
 
 //https://www.youtube.com/watch?v=KBHFyg2AcZ4
+
+/*************************************************************
+Version 2
+**************************************************************/
+
+
+//return array of strings
+function permutator(inputArr) {
+  var results = [];
+  var size = inputArr.length;
+  
+  function permute(arr, result) {
+    var current;
+    if (!result) {
+        result = [];
+    }
+
+    for (var i = 0; i < arr.length; i++) {
+      current = arr.splice(i, 1);
+      console.log("cur i",current,i);
+      console.log("arr",arr);
+      
+      //add current to next result
+      var nextResult = result.concat(current);
+      
+      //if nextresult is size of a permutation
+      //push to list of permutations
+      if (nextResult.length === size) {
+          console.log("push");
+          results.push(nextResult);
+      }
+      
+      console.log("next result", nextResult);
+      console.log("recursive call", arr, nextResult);
+      console.log("***************************");
+      
+      //if nextResult is the size of a valid permutation
+      //we know that arr.slice() is an empty array
+      //since it's an empty array
+      //it will do the next work after the recursive call
+      var nextArray = arr.slice();
+      permute(nextArray, nextResult);
+
+      //rotates the characters
+      arr.splice(i, 0, current[0]);
+      console.log("after", arr.length);
+      console.log('splice',arr);
+      
+    }
+
+    return results;
+  }
+
+  return permute(inputArr);
+}
