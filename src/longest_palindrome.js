@@ -6,6 +6,42 @@ must be consecutive. So I guess not really a power set :p
 **************************************************************/
 
 /*************************************************************
+Attempt #3
+Code cleanup a little bit more
+**************************************************************/
+
+var longestPalindrome = function(str) {
+
+  var arr = str.split('');
+  var longestPalindrome = '';
+
+  var isPalindrome = function(left, right) {
+    while(left < right) {
+      if (arr[left] === arr[right]) {
+        left++;
+        right--;
+      } else {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  for (var i = 0; i < arr.length; i++) {
+    for (var j = arr.length-1; j > i; j--) {
+      if (arr[i] === arr[j]) {
+        if(isPalindrome(i, j) && (j+1-i > longestPalindrome.length)) {
+            longestPalindrome = arr.slice(i, j+1).join("");
+        }
+      }
+    }
+  }
+  
+  return longestPalindrome;
+}
+
+
+/*************************************************************
 Attempt #2, looks a lot nicer but running time still isn't
 that great
 **************************************************************/
@@ -28,6 +64,8 @@ var longestPalindrome = function(str) {
   }
 
   for (var i = 0; i < arr.length; i++) {
+    //actually maybe this check captures all cases
+    //
     for (var j = arr.length-1; j > i; j--) {
       if (arr[i] === arr[j]) {
         if(isPalindrome(i, j)) {
