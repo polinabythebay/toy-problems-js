@@ -7,6 +7,33 @@
 //rockPaperPermutation (1) //=> ['r','p','s']
 //rockPaperPermutation (2) //=> [ "rr", "rp", "rs", "pr", "pp", "ps", "sr", "sp", "ss" ]
 
+/*************************************************************
+Solution #2
+
+**************************************************************/
+
+function rockpaperscissors(numRounds) {
+    var arr = ['r','p','s'];
+    var results = [];
+    
+    function recurse(num, str) {
+        if (num === 0) {
+            results.push(str);
+            return;
+        }
+        for (var i = 0; i < arr.length; i++) {
+            recurse(num-1, str+ arr[i]);
+        }
+    }
+    recurse(numRounds,'');
+    return results;
+}
+
+/*************************************************************
+Solution #1
+
+**************************************************************/
+
 function rockPaperPermutation (roundCount) {
 
 //base array for founds
