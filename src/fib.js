@@ -42,3 +42,31 @@ nthFibonacci = function(n) {
   }
   return fib[n];
 };
+
+/*************************************************************
+Other versions
+
+**************************************************************/
+
+
+var fibRecurs = function(n){
+  return n < 2 ? n : fibRecurs(n-1) + fibRecurs(n-2);
+};
+​
+​
+var fibMem = function(n){
+  for(var i = 0; i <= n; i++){
+    fibMem.mem = i < 2 ? i : fibMem.mem[i-2] + fibMem.mem[i-1];
+  }
+  return fibMem.mem[n];
+};
+​
+fibMem.mem = [];
+​
+var fibSpace = function(n){
+  var mem = [0,1];
+  for(; n > 1; n--){
+    mem.push(mem.shift() +mem[0]);
+  }
+  return mem[n];
+};
