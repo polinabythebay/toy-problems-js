@@ -48,11 +48,9 @@ Other versions
 
 **************************************************************/
 
-
 var fibRecurs = function(n){
   return n < 2 ? n : fibRecurs(n-1) + fibRecurs(n-2);
 };
-​
 ​
 var fibMem = function(n){
   for(var i = 0; i <= n; i++){
