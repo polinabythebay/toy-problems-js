@@ -2,50 +2,64 @@
 
 This repo is dedicated to problem solving in ES5. TDD courtesy of Mocha and Chai.
 
-### Classical algorithms
+### Toy problems completed
 
-- Selection Sort
-- Insertion Sort
-- Binary Search
+- [x] Anagrams
+- [x] binary search
+- [x] bubble sort
+- [x] character frequency in an array
+- [x] coin sum: given n, how many combinations sum up to n from array of numbers
+- [x] common ancestor: getClosestCommonAncestor for tree class
+- [x] common chars in both strings
+- [x] even occurrence: first thing that occurs even number of times
+- [x] fibonacci: iterative and recursive
+- [x] insertion sort
+- [x] is array subset
+- [x] linkedlist has cycle
+- [x] longest palindrome
+- [x] tree map
+- [x] merge sort
+- [x] return the first non-repeating character
+- [x] number to english
+- [x] isPrime
+- [x] rock-paper-scissors
+- [x] roman numeral translator
+- [x] selection sort
+- [x] spiral matrix traversal
+- [x] string permutations
+- [x] sum contiguous array
+- [x] telephone words
+- [x] equilibrium index
 
 TODO:
 
-- Merge sort
-- Quick sort
+- [ ] async map
+- [ ] binary search array
+- [ ] rotate matrix
 
-### General problem solving algorithms
+Additional TODO:
 
-- n-queens
-- primality check
-- rock/paper/scissors combinations
-- even occurences
-- character frequency
-- number to english
-- highest contiguous sum
+- [ ] Quick sort
+- [ ] string combinations
+- [ ] string permutations
+- [ ] cartesian product
+- [ ] power set
+- [ ] implement fibonacci recursively, dynamically, and iteratively
+- [ ] implement factorial recursively, dynamically, and iteratively
+- [ ] implement the Towers of Hanoi with 3 towers and N disks
+- [ ] find all permutations to represent n cents, given 1, 5, 10, 25 cent coins
+- [ ] print all valid combinations of n-pairs of parentheses
+- [ ] Sort an array of strings so all anagrams are next to each other
+- [ ] Determine if a string contains unique characters
+- [ ] Determine if a string is a permutation of another
+- [ ] Determine if a string is a rotation of another
+- [ ] Reverse characters in a string
+- [ ] Remove specified characters in a string
 
-TODO:
 
-- string combinations
-- string permutations
-- cartesian product
-- power set
-- implement fibonacci recursively, dynamically, and iteratively
-- implement factorial recursively, dynamically, and iteratively
-- implement the Towers of Hanoi with 3 towers and N disks
-- find all permutations to represent n cents, given 1, 5, 10, 25 cent coins
-- print all valid combinations of n-pairs of parentheses
-- Sort an array of strings so all anagrams are next to each other
-- Determine if a string contains unique characters
-- Determine if a string is a permutation of another
-- Determine if a string is a rotation of another
-- Reverse characters in a string
-- Find the first non-repeated character in a string
-- Remove specified characters in a string
-- Reverse words in a string
-
-- Given an array of unique words, find the word that contains the greatest number of other words. A word must be at least two letters long.
-- Given an array, find the length of the longest increasing sequence.
-- Given an array of arbitrarily nested arrays, return n, where n is the deepest level that contains a non-array value.
+- [ ] Given an array of unique words, find the word that contains the greatest number of other words. A word must be at least two letters long.
+- [ ] Given an array, find the length of the longest increasing sequence.
+- [ ] Given an array of arbitrarily nested arrays, return n, where n is the deepest level that contains a non-array value.
 
 ### Common functional programming methods
 
