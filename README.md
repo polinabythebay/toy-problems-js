@@ -130,3 +130,15 @@ $ git clone https://github.com/polinadotio/this-project.git
 $ git checkout -b my-branch origin/new-branch
 $ open SpecRunner.html
 ```
+
+
+for most array types, an insert at the end is O(1) amortized (amortized because most arrays have some free space allocated at the end - but if you're out of free space you will need to allocate and copy the array)
+
+insert at the start would probably be O(n), since you probably need to move all of the elements over after the insert
+
+though the insert vs append distinction is worth keeping in mind
+
+arrays have O(1) random accesses but O(n) inserts, whereas linked lists will have O(n) random accesses but O(1) inserts.
+
+one general problem with linked lists is that since nodes tend to be allocated independently you'll have poor locality of memory and thus poor caching behavior. lists often if you access element i you'll want to access element i+1, and memory loads usually load words (a few bytes) at once so accessing i+1 would be a cache hit with regular arrays but probably not for linked lists
+
