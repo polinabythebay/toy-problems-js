@@ -5,6 +5,7 @@ This repo is dedicated to problem solving in ES5. TDD courtesy of Mocha and Chai
 ### Toy problems completed
 
 - [x] Anagrams
+- [x] largest binary gap
 - [x] binary search
 - [x] bubble sort
 - [x] character frequency in an array
