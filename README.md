@@ -19,6 +19,7 @@ This repo is dedicated to problem solving in ES5. TDD courtesy of Mocha and Chai
 - [x] linkedlist has cycle
 - [x] longest palindrome
 - [x] tree map
+- [x] max words in sentence
 - [x] merge sort
 - [x] return the first non-repeating character
 - [x] number to english
@@ -32,6 +33,7 @@ This repo is dedicated to problem solving in ES5. TDD courtesy of Mocha and Chai
 - [x] sum contiguous array
 - [x] telephone words
 - [x] equilibrium index
+- [x] whole squares in range
 
 TODO:
 
