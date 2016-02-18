@@ -2,6 +2,12 @@
 //get middle of the array and make it the root
 //recursively do the same for the left half and the right half
 
+//time complexity: O(n). the middle of each range is picked on 
+//each iteration, so each element is chosen once
+//time increases linearly with respect to size of input
+
+//space complexity.
+
 var BinarySearchTree = function(value) {
   this.value = value;
   this.left = null;
