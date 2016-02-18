@@ -26,6 +26,7 @@ This repo is dedicated to problem solving in ES5. TDD courtesy of Mocha and Chai
 - [x] rock-paper-scissors
 - [x] roman numeral translator
 - [x] selection sort
+- [x] sorted array to binary search tree
 - [x] spiral matrix traversal
 - [x] string permutations
 - [x] sum contiguous array
