@@ -1,3 +1,12 @@
+//more clever way of getting nth bit of a number
+function nthBit(x, n) {
+    return (x >> n) & 1;
+}
+
+console.log(nthBit(20, 4));
+console.log(8 === 0b0001000);
+console.log(numBitsSet(0b10101));
+
 //find largest gap in a binary string
 //longest gap of zeroes between ones
 var binaryGap = function(num) {

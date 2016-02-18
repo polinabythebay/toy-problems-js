@@ -22,9 +22,38 @@
 //approach
 //swap based recursive approach
 
-var stringPermutations = function(string) {
+/*************************************************************
+Latest version, much better
+**************************************************************/
 
+function permutations(arr) {
+  var ret = [];
+  
+  function perms(arr, str) {
+      console.log(arr);
+      console.log(str);
+
+      if (arr.length === 0) {
+          ret.push(str);
+      } else {
+          
+      for (var i = 0; i < arr.length; i++) {
+          
+          var new_str = str + arr[i];
+          var new_arr = arr.slice();
+          
+          new_arr.splice(i, 1); //remove ith element
+          perms(new_arr, new_str);
+      }
+      }
+  }
+  
+  perms(arr, '');
+  
+  return ret;
 }
+
+console.log(permutations(['a', 'b', 'c']));
 
 /*************************************************************
 Version 1
