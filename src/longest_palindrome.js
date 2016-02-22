@@ -67,6 +67,7 @@ var longestPalindrome = function(str) {
     //actually maybe this check captures all cases
     //
     for (var j = arr.length-1; j > i; j--) {
+
       if (arr[i] === arr[j]) {
         if(isPalindrome(i, j)) {
           var palindrome = arr.slice(i, j+1).join("");
@@ -75,6 +76,7 @@ var longestPalindrome = function(str) {
           }
         }
       }
+      
     }
   }
   
