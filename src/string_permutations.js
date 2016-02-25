@@ -26,6 +26,40 @@
 Latest version, much better
 **************************************************************/
 
+//time: factorial O(!N)
+//space: O(log(N)). making log N additional arrays
+//and recursive call stack is no more than log(N) deep
+//depth of the tree of calls
+
+var permutations = function(arr) {
+    var results = [];
+    var permutate = function(str, arr) {
+        //base case
+        if (arr.length === 0) {
+            results.push(str);
+        }
+        for (var i = 0; i < arr.length; i++) {
+            var new_str = str + arr[i];
+            //remove i from array and pass it in
+            //make a copy of that array
+            var new_arr = arr.slice();
+            new_arr.splice(i,1);
+            permutate(new_str, new_arr);
+        }
+        
+    }
+    permutate("", arr);
+    return results;
+}
+
+permutations(['a','b','c']);
+
+//[a,b,c]
+//P("" ,abc)
+//P("a", bc)
+//P("ab",c)
+//P("abc","") //want to add this to my results
+
 function permutations(arr) {
   var ret = [];
   
