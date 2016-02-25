@@ -54,7 +54,6 @@ function allAnagrams = function(string) {
   return Object.keys(anagrams);
 }
 
-
 /*************************************************************
 Solution #1
 Rotates characters after the recursive call
