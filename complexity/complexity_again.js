@@ -75,7 +75,6 @@ function findDuplicate(collection) {
  *  Auxiliary Space Complexity: O(N*M)
  **/
 
-
  //1,1,1,1
  //1,1,1
 
@@ -115,12 +114,8 @@ function nthFibonacci(n) {
 };
 
 
-/************************
- *     Extra Credit     *
- ************************/
-
 /**
- * Extra Credit 1:
+ * 
  *
  * Problem: Refactor findDuplicate to find all repeating elements in O(n) time complexity
  *          What is the auxiliary space complexity of your solution?
@@ -148,21 +143,33 @@ function findDuplicateN(arr) {
 }
 
 /**
- * Extra Credit 2:
- *  Time Complexity:
- *  Auxiliary Space Complexity:
+ * 
+ *  Time Complexity: exponential, 2^N
+ *  Auxiliary Space Complexity: O(N), the depth of the call stack is gonna be N
  **/
 
-//
+//time complexity with memoization: linear
+//space complexity: however many things it puts into the cache, which is linear
 
 function nthFibonacci(n){
   var result;
+  var cache = {};
 
   function searchFib(index){
+
+    if (cache[index] !== undefined) {
+      return cache[index];
+    }
+
     if(index < 2){
       return index;
     } else {
-      return searchFib(index-2) + searchFib(index-1);
+
+      var toInsert = searchFib(index-2) + searchFib(index-1);
+      cache[index] = toInsert;
+      return cache[index];
+
+      //return searchFib(index-2) + searchFib(index-1);
     }
   }
 
