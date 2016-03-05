@@ -1,3 +1,34 @@
+//Another way of doing it recursively. 
+
+function powerSet(str) {
+    
+    var results = [];
+    
+    function generateSet(result, depth) {
+        console.log(result, depth);
+        
+        //base case
+        if (depth === str.length) {
+            results.push(result);
+            return;
+        }
+        
+        //update
+        var next_depth = depth+1;
+        var next_result = result + str[depth];
+        
+        //go left
+        generateSet(result, next_depth);
+        
+        //go right
+        generateSet(next_result, next_depth);
+        
+    }
+    
+    generateSet('',0);
+    return results;
+}
+
  /********************************************************************** 
   *                                                                    *
   *                                                                    *
