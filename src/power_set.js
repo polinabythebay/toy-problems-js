@@ -1,4 +1,24 @@
-//Another way of doing it recursively. 
+ /********************************************************************** 
+  *                                                                    *
+  *                                                                    *
+  *  Prompt: Given a set S, return the power set P(S), which is        *
+  *          a set of all subsets of S.                                *
+  *                                                                    *
+  *  Input:  A String                                                  *
+  *  Output: An Array with the power set of the input string           *
+  *                                                                    *
+  *  Example: S = "abc", P(S) = ['', 'a', 'b','c','ab','ac','bc','abc']*                                                               *
+  *                                                                    *
+  *  Note: There should not be any duplicates in the power set         *
+  *        ('ab' and 'ba' are considered the same), and it will always *
+  *        begin with an empty string ('')                             *
+  *                                                                    *
+  **********************************************************************/
+
+
+//time complexity: 2^N power
+//space complexity: builds up a callstack of 2^N
+//second approach to doing it recursively
 
 function powerSet(str) {
     
@@ -29,22 +49,7 @@ function powerSet(str) {
     return results;
 }
 
- /********************************************************************** 
-  *                                                                    *
-  *                                                                    *
-  *  Prompt: Given a set S, return the power set P(S), which is        *
-  *          a set of all subsets of S.                                *
-  *                                                                    *
-  *  Input:  A String                                                  *
-  *  Output: An Array with the power set of the input string           *
-  *                                                                    *
-  *  Example: S = "abc", P(S) = ['', 'a', 'b','c','ab','ac','bc','abc']*                                                               *
-  *                                                                    *
-  *  Note: There should not be any duplicates in the power set         *
-  *        ('ab' and 'ba' are considered the same), and it will always *
-  *        begin with an empty string ('')                             *
-  *                                                                    *
-  **********************************************************************/
+//Another way of doing it recursively, first approach
  
 var powerSet = function(str){
     var results = {}; //this handles cases like abca
