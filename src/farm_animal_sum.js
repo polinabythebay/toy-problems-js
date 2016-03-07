@@ -10,11 +10,56 @@
 // He must buy at least one of each. 
 // How many of each type of animal should he buy?
 
-//
+function pickAnimals(dollarAmt, numAnimals) {
+    
+    var denominations = [10, 3, 0.5];
+    var purchaseList = {'chickens': 1, 'cows': 1, 'pigs': 1};
+    var costList = {'0.5': 'chickens', 3: 'pigs', 10: 'cows'};
+    
+    var target = dollarAmt - 13.5;
+    
+    var output = [];
+    
+    function findCombinations(currentSum) {
+        
+        
+        if (currentSum === target) {
+          var totalAnimals = output.length + 3;
+          if (totalAnimals >= numAnimals) {
+             printAnimals();  
+          }
+             
+        }
+        
+        for (var i = 0; i < denominations.length; i++) {
+            var nextSum = currentSum + denominations[i];
+            if (nextSum <= target) {
+                output.push(denominations[i]);
+                findCombinations(nextSum);
+                output.pop();
+            } else {
+                return;
+            }
+        }
+    }
+    
+    function printAnimals() {
+        for (var i = 0; i < output.length; i++) {
+            var animal = costList[output[i]];
+            purchaseList[animal]++;
+        }
+        
+        for (animal in purchaseList) {
+            console.log(purchaseList[animal], animal);
+            purchaseList[animal] = 1;
+        }
+        
+        console.log("========================");
+    }
+    
+    findCombinations(0);
+    
+}
 
-//similar to coin sum
-//given n, how many combinations sum up to n from
-//an array of numbers
-
-animals = [10,3,.5];
+pickAnimals(27, 2); //100, 100
 
