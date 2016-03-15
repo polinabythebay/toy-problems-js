@@ -37,5 +37,35 @@ var merge = function(arr1, arr2) {
     return merged;
 }
 
+//more efficient than the merge above, doesn't shift 
+var mergeFaster = function(arr1, arr2) {
+    //compare first element from each list
+    //place smaller one in sorted merged list
+    //keep comparing first elements until all are placed
+    var merged = [];
+    var left = 0;
+    var right = 0;
+    
+    while (left < arr1.length && right < arr2.length) {
+        
+        if (arr1[left] >= arr2[right]) {
+            merged.push(arr2[right]);
+            right++;
+        } else {
+            merged.push(arr1[left]);
+            left++;
+        }
+    }
+    
+    if (arr1[left] === undefined) {
+        merged = merged.concat(arr2.slice(right));
+    }
+    if (arr2[right] === undefined) {
+        merged = merged.concat(arr1.slice(left));
+    }
+    
+    return merged;
+}
+
 merge([1,3,5],[2,4]);
 mergeSort([3,4,1,6,2,5]);
