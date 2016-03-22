@@ -45,6 +45,7 @@ var permutations = function(arr) {
             var new_arr = arr.slice();
             new_arr.splice(i,1);
             permutate(new_str, new_arr);
+            
         }
         
     }
