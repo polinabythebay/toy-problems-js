@@ -18,9 +18,11 @@ This repo is dedicated to problem solving in ES5. TDD courtesy of Mocha and Chai
 - [x] is array subset
 - [x] linkedlist has cycle
 - [x] longest palindrome
+- [x] lattice paths
 - [x] tree map
 - [x] max words in sentence
 - [x] merge sort
+- [x] quick sort
 - [x] return the first non-repeating character
 - [x] number to english
 - [x] isPrime
@@ -34,6 +36,7 @@ This repo is dedicated to problem solving in ES5. TDD courtesy of Mocha and Chai
 - [x] telephone words
 - [x] equilibrium index
 - [x] whole squares in range
+
 
 TODO:
 

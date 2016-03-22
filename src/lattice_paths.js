@@ -24,10 +24,23 @@
   *    2: https://en.wikipedia.org/wiki/Lattice_path                      *
   *                                                                       *
   *************************************************************************/
-//Third take not using a helper function
+//Third take not using a helper function; pure recursion, no side effects
 
+//this one also handles rectangles in addition to squares
+//and also starts at bottom right, then goes to top left (0,0)
+function latticePaths(x,y) {
+    if (x === 0 && y === 0) {
+        return 1;
+    }
+    
+    else if (x < 0 || y < 0) {
+        return 0;
+    }
+    
+    return latticePaths(x-1, y) + latticePaths(x, y-1);
+}
 
-
+latticePaths(2,2);
 
 
 
