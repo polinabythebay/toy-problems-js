@@ -24,6 +24,37 @@
   *    2: https://en.wikipedia.org/wiki/Lattice_path                      *
   *                                                                       *
   *************************************************************************/
+
+//4th take
+//recursive approach using a cache
+//memoization technique in dynamic programming
+function latticePaths(n) {
+    var cache = {};
+    
+    function traverse(x,y) {
+        var key = x + '_' + y;
+        
+        if (cache[key] !== undefined) {
+            return cache[key];
+        } else if (x === 0 && y === 0) {
+        return 1;
+        }
+        else if (x < 0 || y < 0) {
+        return 0;
+        }
+    
+        cache[key] = traverse(x-1, y) + traverse(x, y-1);
+    
+        return cache[key];
+    }
+
+    return traverse(n,n);
+}
+
+latticePaths(2);
+
+
+
 //Third take not using a helper function; pure recursion, no side effects
 
 //this one also handles rectangles in addition to squares
