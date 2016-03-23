@@ -14,7 +14,7 @@ This repo is dedicated to problem solving in ES5. TDD courtesy of Mocha and Chai
 - [x] common chars in both strings
 - [x] equilibrium index
 - [x] even occurrence: first thing that occurs even number of times
-- [x] fibonacci: iterative and recursive
+- [x] implement fibonacci recursively, dynamically, and iteratively
 - [x] insertion sort
 - [x] is array subset
 - [x] linkedlist has cycle
@@ -49,7 +49,6 @@ Additional TODO:
 
 - [ ] string combinations
 - [ ] cartesian product
-- [ ] implement fibonacci recursively, dynamically, and iteratively
 - [ ] implement factorial recursively, dynamically, and iteratively
 - [ ] implement the Towers of Hanoi with 3 towers and N disks
 - [ ] find all permutations to represent n cents, given 1, 5, 10, 25 cent coins
