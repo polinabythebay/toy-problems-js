@@ -1,3 +1,61 @@
+ /********************************************************************** 
+  *   Consecutive Sum                                    *
+  *                                                                    *
+  *  Prompt: Given an array of integers find the sum of consecutive    *
+  *          values in the array that produces the maximum value.      *
+  *                                                                    *
+  *  Input:  Unsorted array of positive and negative integers          *
+  *  Output: Integer (max consecutive sum)                             *
+  *                                                                    *
+  *  Time Complexity: O(n)                                             *
+  *  Auxiliary Space Complexity: O(1)                                  *
+  *                                                                    *
+  *  Example: input = [6, -1, 3, 5, -10]                               *
+  *           output = 13 (6 + -1 + 3 + 5 = 13)                        *
+  *                                                                    *
+  **********************************************************************/
+
+//a recursive approach to consecutive sum of integers:
+//not that efficient by any means, but another way of looking at it
+function maxSum(arr) {
+    
+    var max = null;
+    
+    function findMax(result, arr) {
+        console.log(result, arr);
+        //first time around result will be null
+        if (result !== null) {
+            //update max if current consecutive sum is greater
+            //than max
+            if (max === null || result > max) {
+                max = result;
+            }
+        }
+        
+        if (arr.length === 0) {
+            return;
+        }
+        
+        for (var i = 0; i < arr.length; i++) {
+            if (result === null) {
+                result = arr[i];
+            } else {
+                result = result + arr[i];
+            }
+            var next_arr = arr.slice(i+1);
+            findMax(result, next_arr);
+            
+        }
+    }
+    
+    findMax(null, arr);
+    console.log(max);
+    
+}
+
+maxSum([6, -1, 3, 5, -10]); //13
+
+//Iterative approaches below
 function sumArray(array) {
   var highestSum = array[0];
 
