@@ -100,26 +100,6 @@ Additional TODO:
 - delay
 - throttle
 
-### Time Complexity of sorting Algs
-
- | Worst | Best | Average |
---- | --- | --- | --- | --- |
-Selection Sort | O(n^2) | O(n^2) | O(n^2) |
-Insertion Sort | O(n^2) | O(n) | O(n^2)  |
-Merge Sort | O(nlogn) | O(nlogn)  | O(nlogn) |
-Quick Sort | O(n^2) | O(nlogn) | O(nlogn) |
-Binary Search | O(logn) | O(1) | O(logn) |
-
-### Space Complexity
-
- | Worst | Best | Average |
---- | --- | --- | --- | --- |
-Selection Sort | O(n) | |  |
-Insertion Sort | O(n)|  |  |
-Merge Sort | O(n) |   |  |
-Quick Sort | O(n) |  |  |
-Binary Search | O(1) |  |  |
-
 ### Additional resources
 
 - [All the problems](http://www.programcreek.com/2012/11/top-10-algorithms-for-coding-interview/)
