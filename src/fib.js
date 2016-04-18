@@ -13,8 +13,6 @@ function fib(num) {
     }
 }
 
-//fib(8);
-
 //top down dynamic programming approach
 //function decorator to memoize
 function memoize(fun) {
@@ -37,7 +35,6 @@ function memoize(fun) {
 
 //wrap original function by returning memoize
 var fib = memoize(fib);
-
 fib(8);
 
 /*************************************************************
