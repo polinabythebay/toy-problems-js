@@ -1,6 +1,6 @@
-## Algorithms with TDD
+## Toy Problems in JavaScript (with some TDD)
 
-This repo is dedicated to problem solving in ES5. TDD courtesy of Mocha and Chai.
+This repo is dedicated to me problem solving whilst learning ES5. TDD courtesy of Mocha and Chai.
 
 ### Toy problems completed
 
